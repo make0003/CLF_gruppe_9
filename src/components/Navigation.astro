@@ -1,12 +1,44 @@
 ---
+
 ---
 
-<nav>
-    <img src="public/logo_clf.svg" alt="">
- <a href="/">Sign up</a>
- 
- <a href="/burgermenu">
-    <img src="public/burgermenu.svg" alt="">
-</a>
+<header>
+  <nav>
+    <img src="public/logo_clf.svg" alt="" />
+    <div>
+      <p>Nedtælling</p>
+      <p>10 måneder 20 dage 12 timer</p>
+    </div>
+    <ul>
+      <p>EN</p>
+      <img src="public/globus.svg" alt="" />
+      <img src="public/search.svg" alt="" />
+      <a href="/burgermenu"><img src="public/burgermenu.svg" alt="" /></a>
+    </ul>
+  </nav>
+</header>
 
-</nav>
+<style>
+  header {
+  }
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  p {
+    text-align: center;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 20px;
+  }
+
+  ul a {
+    margin-top: 13px;
+  }
+</style>
