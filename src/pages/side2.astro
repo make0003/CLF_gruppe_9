@@ -1,0 +1,69 @@
+---
+import MenuLayout from "../layouts/MenuLayout.astro";
+import "../styles/style.css";
+import BurgermenuItem from "../components/BurgermenuItem.astro";
+---
+<MenuLayout>
+    <div class="grid_1">
+
+    <h1>FESTIVAL 2024</h1>
+    <div class="flex_2">
+        <img class="pil" src="/tilbagepil2.svg" alt="">
+     
+    <ul>
+    <BurgermenuItem burgermenutekst="PROGRAM 2024" ><a href="#"> <img src="/burgermenu-pi.svg" alt=""></a></BurgermenuItem>
+    <BurgermenuItem burgermenutekst="MAP" ><a href="#"> <img src="/burgermenu-pi.svg" alt=""></a></BurgermenuItem>
+    <BurgermenuItem burgermenutekst="EVENTS"  ><a href="#"> <img src="/burgermenu-pi.svg" alt=""></a></BurgermenuItem>
+    <BurgermenuItem burgermenutekst="KUNSTNERE"  ><a href="#"> <img src="/burgermenu-pi.svg" alt=""></a></BurgermenuItem>
+   
+    </ul>
+    </div>
+
+    </div>
+ 
+</MenuLayout>
+
+<style>
+    h1{
+        font-size: 9.375rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
+        color: #ffffff;
+        margin: 0;
+    }
+
+
+    ul{
+        color: #ffffff;
+        list-style-type: none;
+        padding: 200px 150px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 2.1rem;
+        justify-content: space-between;
+        
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 2rem;
+        text-transform: uppercase;
+        
+    }
+
+    .grid_1{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+ 
+    }
+    .flex_2
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+    }
+ 
+    .pil {
+        max-width: 15%;
+    }
+</style>
