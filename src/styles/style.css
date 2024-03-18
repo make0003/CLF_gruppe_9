@@ -1,16 +1,13 @@
 :root {
   --background-color: #171310;
   --font-color: #ffffff;
-  --primary-button-stor-glow: 0px 0px 24.57px 0px #fff, 0px 0px 49.14px 0px #fff, 0px 0px 171.99px 0px #fff, 0px 0px 343.98px 0px #fff, 0px 0px 589.68px 0px #fff, 0px 0px 1031.94px 0px #fff;
+  --primary-button-stor-glow: 0px 0px 24.57px 0px #fff, 0px 0px 49.14px 0px #fff,
+    0px 0px 171.99px 0px #fff, 0px 0px 343.98px 0px #fff,
+    0px 0px 589.68px 0px #fff, 0px 0px 1031.94px 0px #fff;
 }
 
 body {
   background-color: var(--background-color);
-}
-
-p {
   color: var(--font-color);
   font-family: "Montserrat", sans-serif;
 }
-
-

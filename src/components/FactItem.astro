@@ -1,0 +1,18 @@
+---
+const { task, name } = Astro.props;
+---
+
+<li>
+  <span>{task}:</span>
+  {name}
+</li>
+
+<style>
+  li {
+    border-bottom: 2px solid var(--font-color);
+    padding: 1rem 0;
+    span {
+      font-weight: bold;
+    }
+  }
+</style>
