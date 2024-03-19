@@ -3,17 +3,6 @@ import "../styles/style.css";
 import MenuLayout from "../layouts/MenuLayout.astro";
 import Instagram from "../components/Instagram.astro";
 import Lokationmenu from "../components/Lokationmenu.astro";
-const data = await fetch(
-  "https://slquoievbkllhlylrgwr.supabase.co/rest/v1/CLF2",
-  {
-    method: "GET",
-    headers: {
-      apikey:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNscXVvaWV2YmtsbGhseWxyZ3dyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA3Njc5NDgsImV4cCI6MjAyNjM0Mzk0OH0.wlLjb_Yv7jAYDGof6lCqW1s0aZX0DaOFtMHIQm74_wE",
-    },
-  }
-).then((res) => res.json());
-console.log(data);
 ---
 
 <MenuLayout title="Hej">
