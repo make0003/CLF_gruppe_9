@@ -14,7 +14,8 @@ const data = await fetch(
     },
   }
 ).then((res) => res.json());
-console.log(data);
+
+
 ---
 
 <MenuLayout title="Hej">
@@ -30,16 +31,21 @@ console.log(data);
 
 <Instagram />
 
-<div class="indreby"><h2>Indre by</h2></div>
 
 <div class="grid2">
-  <section>
-    {data.map(data)
-    =>{return     <Programcard />;}}
+
+<h2>Indre by</h2>
+  <section class="card">
+    {data.map(card=>{
+return <Programcard data={card}/>;
+    })
+    }
+
 
   </section>
-  <Lokationmenu />
+
 </div>
+  <Lokationmenu />
 <style>
   h2 {
     margin-top: 0%;
@@ -53,4 +59,5 @@ console.log(data);
     text-align: center;
     padding-top: 6%;
   }
+
 </style>
