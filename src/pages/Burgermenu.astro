@@ -59,4 +59,18 @@ import BurgermenuItem from "../components/BurgermenuItem.astro";
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+    @media screen and (max-width: 800px) {
+        .grid_1{
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        
+        h1{
+            font-size: 4.6875rem;
+        }
+        ul{
+            font-size: 1rem;
+            padding: 100px 0px;
+        }
+    }
 </style>
