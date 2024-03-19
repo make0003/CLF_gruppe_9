@@ -3,42 +3,47 @@ import "../styles/style.css";
 import MenuLayout from "../layouts/MenuLayout.astro";
 import Instagram from "../components/Instagram.astro";
 import Lokationmenu from "../components/Lokationmenu.astro";
-
+const data = await fetch(
+  "https://slquoievbkllhlylrgwr.supabase.co/rest/v1/CLF2",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNscXVvaWV2YmtsbGhseWxyZ3dyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA3Njc5NDgsImV4cCI6MjAyNjM0Mzk0OH0.wlLjb_Yv7jAYDGof6lCqW1s0aZX0DaOFtMHIQm74_wE",
+    },
+  }
+).then((res) => res.json());
+console.log(data);
 ---
+
 <MenuLayout title="Hej">
-<h1></h1>
+  <h1></h1>
 </MenuLayout>
 
-  <div class="header">
-      <h1>PROGRAM <br> 2024</h1>
-    
-        <h2>INSTAGRAM HIGHLIGHTS</h2>
-        <p>We are here to inspire, get inspired by others</p>
-     </div>
+<div class="header">
+  <h1>PROGRAM <br /> 2024</h1>
+  <h2>INSTAGRAM HIGHLIGHTS</h2>
+  <p>We are here to inspire, get inspired by others</p>
+</div>
 
-<Instagram/>
- 
-<div class="indreby"><h2>Indre by</h2> </div>
+<Instagram />
+
+<div class="indreby"><h2>Indre by</h2></div>
 
 <div class="grid2">
-<Lokationmenu/>
-
+  <Lokationmenu />
 </div>
 <style>
-    h2{
-        margin-top: 0%;
-        text-decoration: underline;
-        
-    }
-    h1{
-        margin-bottom: 1%;
-    }
-   
-    .indreby h2{
-     text-align: center;
-     padding-top: 6%;
-    }
-        
+  h2 {
+    margin-top: 0%;
+    text-decoration: underline;
+  }
+  h1 {
+    margin-bottom: 1%;
+  }
 
+  .indreby h2 {
+    text-align: center;
+    padding-top: 6%;
+  }
 </style>
-
