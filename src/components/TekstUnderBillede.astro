@@ -2,13 +2,19 @@
 
 ---
 
-<div class="buttons_forside">
-  <button>Festival 2024</button>
-  <button>Map</button>
-  <button>Tidligere</button>
+<!-- *Tekst ved siden af billede  -->
+<div>
+  <h2>COPENHAGEN LIGHT FESTIVAL HAR FOKUS PÅ</h2>
+  <h2 class="energien">ENERGIEN</h2>
+  <p>På en dag svarer forbruget i festivalen til 3 fuldt opladte elbiler</p>
+
+  <button>LÆS MERE</button>
 </div>
 
 <style>
+  h2 {
+    font-size: 2.3rem;
+  }
   button {
     border-color: var(--font-color);
 
@@ -20,15 +26,7 @@
     text-transform: uppercase;
     border-width: 5px;
     font-weight: bold;
-  }
-
-  .buttons_forside {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-right: 40%;
-    gap: 30px;
-    margin-top: -60px;
-    margin-left: 10px;
+    margin-top: 10px;
   }
 
   button:hover {
@@ -39,6 +37,22 @@
     animation: glow 1s ease-in-out infinite alternate;
   }
 
+  .energien {
+    font-size: 9rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: -10px;
+    font-family: "Raleway Dots", sans-serif;
+  }
+
+  p {
+    font-size: 1.7rem;
+  }
+
+  div {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
   @-webkit-keyframes glow {
     from {
       text-shadow:
@@ -66,12 +80,17 @@
     button {
       font-size: 1.3rem;
     }
+    h1 {
+      font-size: 6.7rem;
+    }
+    .energien {
+      font-size: 6.7rem;
+    }
   }
   @media screen and (max-width: 800px) {
     button {
-      margin-top: 50px;
       margin-right: 50px;
-      margin-left: 50px;
+
       padding-left: 20px;
       padding-right: 20px;
     }
@@ -82,6 +101,15 @@
       margin-left: auto;
       margin-right: auto;
       gap: 0;
+    }
+
+    .energien {
+      font-size: 3.5rem;
+      margin-left: 0px;
+    }
+
+    p {
+      font-size: 1rem;
     }
   }
 </style>
