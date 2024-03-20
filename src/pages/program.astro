@@ -36,14 +36,15 @@ const data = await fetch(
 <div class="grid2">
   <Lokationmenu />
 
-  <section class="card">
+  
+  <div class="card">
     {data.map(card=>{
 return <Programcard data={card}/>;
     })
+    
     }
-
-
-  </section>
+    </div>
+  
 
 </div>
 </main>
@@ -62,5 +63,14 @@ return <Programcard data={card}/>;
     text-decoration: underline;
     font-size: 50px;
   }
+.card{
+  display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid2{
+flex: ;
+}
+
 
 </style>
