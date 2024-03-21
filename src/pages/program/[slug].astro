@@ -1,0 +1,95 @@
+---
+export async function getStaticPaths() {
+  const data = await fetch(
+    "https://slquoievbkllhlylrgwr.supabase.co/rest/v1/CLF2",
+    {
+      method: "GET",
+      headers: {
+        apikey:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNscXVvaWV2YmtsbGhseWxyZ3dyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA3Njc5NDgsImV4cCI6MjAyNjM0Mzk0OH0.wlLjb_Yv7jAYDGof6lCqW1s0aZX0DaOFtMHIQm74_wE",
+      },
+    }
+  ).then((response) => response.json());
+
+  return data.map((udstilling) => {
+    return {
+      params: { slug: udstilling.slug },
+      props: { myData: udstilling },
+    };
+  });
+}
+const { myData } = Astro.props;
+
+import MenuLayout from "../../layouts/MenuLayout.astro";
+import "../../styles/style.css";
+import FactItem from "../../components/FactItem.astro";
+---
+
+<MenuLayout>
+  <article>
+    <div class="header">
+      <h1>{myData.udstilling}</h1>
+    </div>
+    <h2>{myData.kunstner}</h2>
+    <img src={myData.img} alt="" />
+    <div class="cols">
+      <section>
+        <p>
+          {myData.text01}
+        </p>
+        <p>
+          {myData.text02}
+        </p>
+        <p>
+          {myData.text03}
+        </p>
+      </section>
+      <section>
+        <h3><strong>Lokation</strong><br />{myData.lokation}</h3>
+        <ul>
+          <FactItem task="Lys" name={myData.lys} />
+          <FactItem task="Links" name={myData.links} />
+          <FactItem task="Tak" name={myData.tak} />
+        </ul>
+      </section>
+    </div>
+  </article>
+</MenuLayout>
+
+<style>
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  img {
+    object-fit: cover;
+  }
+  ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  /* skal stå til alle */
+
+  @media only screen and (max-width: 800px) {
+    img {
+      height: 400px;
+    }
+    .cols {
+      grid-template-columns: 1fr;
+    }
+    .cols section:last-child {
+      order: -1;
+    }
+  }
+</style>

@@ -5,43 +5,130 @@ import Instagram from "../components/Instagram.astro";
 import Lokationmenu from "../components/Lokationmenu.astro";
 import Programcard from "../components/Programcard.astro";
 
+const data = await fetch(
+  "https://slquoievbkllhlylrgwr.supabase.co/rest/v1/CLF2",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNscXVvaWV2YmtsbGhseWxyZ3dyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA3Njc5NDgsImV4cCI6MjAyNjM0Mzk0OH0.wlLjb_Yv7jAYDGof6lCqW1s0aZX0DaOFtMHIQm74_wE",
+    },
+  }
+).then((res) => res.json());
+
+
 ---
+
 <MenuLayout title="Hej">
-<h1></h1>
+  <h1></h1>
 </MenuLayout>
 
-  <div class="header">
-      <h1>PROGRAM <br> 2024</h1>
-    
-        <h2>INSTAGRAM HIGHLIGHTS</h2>
-        <p>We are here to inspire, get inspired by others</p>
-     </div>
+<main>
+<div class="header">
+  <h1>PROGRAM <br /> 2024</h1>
+  <div class="tilbageknap">
+<img src="/tilbageknap.svg" alt="hello">
+</div>
+<div class="insta">
+  <h2>INSTAGRAM HIGHLIGHTS</h2>
+  <p>We are here to inspire, get inspired by others</p>
+  </div>
+</div>
+<div class="instagram">
+<Instagram />
+</div>
 
-<Instagram/>
- 
-<div class="indreby"><h2>Indre by</h2> </div>
+<div class="indreby"><h2>Indre by</h2></div>
 
 <div class="grid2">
-    <Programcard/>
-<Lokationmenu/>
-
+<div class="lokationmenu">
+  <Lokationmenu />
+</div>
+  
+  <div class="card">
+    {data.map(card=>{
+return <Programcard data={card}/>;
+    })
+    
+    }
+    </div>
+  
 
 </div>
+</main>
 <style>
-    h2{
-        margin-top: 0%;
-        text-decoration: underline;
-        
-    }
-    h1{
-        margin-bottom: 1%;
-    }
+  h2 {
+    margin-top: 0%;
+    text-decoration: underline;
+  }
+  h1 {
+    margin-bottom: 1%;
+  }
+
+  .indreby h2 {
+    text-align: left;
+    padding-top: 6%;
+    padding-left: 18.5%;
+    text-decoration: underline;
+    font-size: 50px;
+  }
+.card{
+  display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+gap: 2rem;
+}
+div{
+       padding-right: 3%;
+}
+
+.grid2{
+display: flex;
+}
+
+.tilbageknap{
+ right: 0;
+ position: absolute;
+display: flex;
+top: 38%;
+
+}
+@media screen and (max-width: 800px) {
+  .card{
+    grid: none;
    
-    .indreby h2{
-     text-align: center;
-     padding-top: 6%;
-    }
-        
+  
+  }
+
+  .lokationmenu{
+       display: none;
+     
+}
+
+h1{
+  font-size: 44px;
+
+}
+
+h2{
+   font-size: 25px;
+
+}
+
+ .indreby h2 {
+    text-align: left;
+    padding-top: 6%;
+    padding-left: 18.5%;
+    text-decoration: underline;
+    font-size: 25px;
+      
+}
+
+.tilbageknap{
+  display: none;
+}
+.instagram, .insta{
+  display: none;
+}
+  }
 
 </style>
-
