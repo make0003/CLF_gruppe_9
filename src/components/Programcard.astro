@@ -1,33 +1,29 @@
 ---
-const {data}= Astro.props;
-console.log(data)
+const { data } = Astro.props;
+console.log(data);
 ---
-<a href={`program/${data.slug}`}>
 
-<article class="card">
+<a href={`/program/${data.slug}`}>
+  <article class="card">
+    <h3>{data.udstilling}</h3>
 
-   <h3>{data.udstilling}</h3>
-    
     <p>{data.kunstner}</p>
     <img src={data.img} alt="ss" />
-<h3>{data.lokation}</h3>
-<p>TÅRNET PÅ KULTORVET</p>
-</article>
+    <h3>{data.lokation}</h3>
+    <p>TÅRNET PÅ KULTORVET</p>
+  </article>
 </a>
 
 <style>
-
- article {
-    border: 1px solid white; 
+  article {
+    border: 1px solid white;
     padding: 10px;
     width: 300px;
     height: 380px;
     color: white;
     text-decoration: none;
-}
- a{
-     text-decoration: none;
- }
-
-
+  }
+  a {
+    text-decoration: none;
+  }
 </style>
