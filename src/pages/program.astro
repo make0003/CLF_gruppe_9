@@ -27,7 +27,10 @@ const data = await fetch(
 <div class="header">
   <h1>PROGRAM <br /> 2024</h1>
   <div class="tilbageknap">
-<img src="/tilbageknap.svg" alt="hello">
+
+<a href="side2">
+  <img src="/tilbageknap.svg" alt="hello">
+</a>
 </div>
 <div class="insta">
   <h2>INSTAGRAM HIGHLIGHTS</h2>
@@ -53,9 +56,15 @@ return <Programcard data={card}/>;
     }
     </div>
   
+  
 
-</div>
+
+    
+  
+    </div>
 </main>
+
+
 <style>
   h2 {
     margin-top: 0%;
@@ -77,6 +86,8 @@ return <Programcard data={card}/>;
  grid-template-columns: 1fr 1fr 1fr;
 gap: 2rem;
 }
+
+
 div{
        padding-right: 3%;
 }
@@ -92,11 +103,38 @@ display: flex;
 top: 38%;
 
 }
+
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
+  .card{ display: grid;
+ grid-template-columns: 1fr 1fr;
+gap: 2rem;}
+
+h1{
+  font-size: 60px;
+
+}
+
+h2{
+   font-size: 40px;
+
+}
+
+.instagram{
+ 
+}
+}
 @media screen and (max-width: 800px) {
   .card{
     grid: none;
-   
-  
+   margin: auto; 
+  }
+.tilbageknap{
+ right: 0;
+ position: absolute;
+display: flex;
+top: 38%;
+width: 60%;
+
   }
 
   .lokationmenu{
@@ -130,5 +168,6 @@ h2{
   display: none;
 }
   }
+
 
 </style>
