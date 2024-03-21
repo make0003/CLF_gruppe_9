@@ -1,0 +1,143 @@
+---
+
+---
+
+<!-- *Tekst ved siden af billede  -->
+<div>
+  <h2>COPENHAGEN LIGHT FESTIVAL HAR FOKUS PÅ</h2>
+  <h2 class="energien">ENERGIEN</h2>
+  <p>På en dag svarer forbruget i festivalen til 3 fuldt opladte elbiler</p>
+
+  <button>LÆS MERE</button>
+</div>
+
+<div class="blue"><img src="/blue.webp" alt="blå gradient" /></div>
+<div class="red"><img src="/red.webp" alt="blå gradient" /></div>
+
+<style>
+  .blue {
+    width: 40%;
+    position: absolute;
+    z-index: -1;
+    top: 900px;
+    right: 0;
+  }
+  .red {
+    width: 80%;
+    position: absolute;
+    z-index: -1;
+    top: 1400px;
+    left: 0;
+  }
+  h2 {
+    font-size: 2.3rem;
+  }
+  button {
+    border-color: var(--font-color);
+
+    background: none;
+    font-family: "Montserrat", sans-serif;
+    color: var(--font-color);
+    padding: 10px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border-width: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  button:hover {
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+
+  .energien {
+    font-size: 9rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: -10px;
+    font-family: "Raleway Dots", sans-serif;
+  }
+
+  p {
+    font-size: 1.7rem;
+  }
+
+  div {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  @-webkit-keyframes glow {
+    from {
+      text-shadow:
+        0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 30px #fff,
+        0 0 40px #ffffff,
+        0 0 50px #fff,
+        0 0 60px #fff,
+        0 0 70px #fff;
+    }
+    to {
+      text-shadow:
+        0 0 20px #fff,
+        0 0 30px #fff,
+        0 0 40px #fff,
+        0 0 50px #fff,
+        0 0 60px #fff,
+        0 0 70px #fff,
+        0 0 80px #fff;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    button {
+      font-size: 1.3rem;
+    }
+    h1 {
+      font-size: 6.7rem;
+    }
+    .energien {
+      font-size: 6.7rem;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    button {
+      margin-right: 50px;
+
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .buttons_forside {
+      grid: none;
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      gap: 0;
+    }
+
+    .energien {
+      font-size: 3.5rem;
+      margin-left: 0px;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    .blue {
+      display: none;
+    }
+    .red {
+      width: 95%;
+      position: absolute;
+      z-index: -1;
+      top: 1300px;
+      right: 100px;
+    }
+  }
+</style>

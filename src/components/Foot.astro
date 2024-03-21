@@ -1,0 +1,35 @@
+---
+import "../styles/style.css";
+---
+
+<footer>
+  <div class="bag">
+    <div class="flex">
+      <img class="top" src="/mad.svg" alt="icon" />
+      <img class="top" src="/appel.svg" alt="icon" />
+      <img class="top" src="/fb.svg" alt="fb" />
+      <img class="top" src="/insta.svg" alt="insta" />
+    </div>
+    <p>
+      &copy; COPENHAGEN LIGHT FESTIVAL | info@copenhagenlightfestival.org | Tlf.
+      +45 25 55 66 04
+    </p>
+  </div>
+</footer>
+
+<style>
+  .bag {
+    padding: 50px;
+    background-color: black;
+  }
+  .top {
+    background-size: cover;
+    z-index: 100;
+    width: 6%;
+  }
+  .flex {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: baseline;
+  }
+</style>

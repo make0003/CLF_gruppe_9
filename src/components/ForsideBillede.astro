@@ -6,37 +6,58 @@
   <img src="/baggrund_forside.webp" alt="" />
 </div>
 
-<h1>COPENHAGEN <div class="light">LIGHT</div> FESTIVAL</h1>
+<h1>COPENHAGEN <div>LIGHT</div> FESTIVAL</h1>
 <h2>2- 25. FEBRUAR 2024</h2>
 
 <style>
-  @media screen and (max-width: 800px) {
-    img {
-      object-fit: fill;
-    }
-  }
-
   img {
     position: absolute;
     width: 100%;
     left: 0px;
     top: 0px;
     z-index: -1;
+    height: 900px;
   }
 
   h1 {
     font-family: "Montserrat", sans-serif;
     color: var(--font-color);
     font-size: 9rem;
-    margin-top: 0;
+    margin-top: -70px;
   }
 
   h2 {
-    font-family: "Montserrat", sans-serif;
-    color: var(--font-color);
+    position: absolute;
+    top: 300px;
+    right: 70px;
+    font-size: 3rem;
   }
 
   .light {
     font-family: "Raleway Dots", sans-serif;
+  }
+
+  @media screen and (max-width: 1200px) {
+    img {
+      height: 750px;
+    }
+    h1 {
+      font-size: 6.7rem;
+    }
+    h2 {
+      top: 260px;
+      font-size: 2.3rem;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    h1 {
+      font-size: 3.5rem;
+    }
+    h2 {
+      font-size: 1.3rem;
+      right: 25px;
+      top: 240px;
+    }
   }
 </style>
