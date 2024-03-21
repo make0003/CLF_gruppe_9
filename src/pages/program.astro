@@ -92,10 +92,16 @@ display: flex;
 top: 38%;
 
 }
+
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+  .card{ display: grid;
+ grid-template-columns: 1fr 1fr;
+gap: 2rem;}
+}
 @media screen and (max-width: 800px) {
   .card{
     grid: none;
-   
+   margin: auto; 
   
   }
 
@@ -130,5 +136,6 @@ h2{
   display: none;
 }
   }
+
 
 </style>
