@@ -26,17 +26,23 @@ const data = await fetch(
 <main>
 <div class="header">
   <h1>PROGRAM <br /> 2024</h1>
+  <div class="tilbageknap">
+<img src="/tilbageknap.svg" alt="hello">
+</div>
 
   <h2>INSTAGRAM HIGHLIGHTS</h2>
   <p>We are here to inspire, get inspired by others</p>
 </div>
-
+<div class="instagram">
 <Instagram />
+</div>
+
 <div class="indreby"><h2>Indre by</h2></div>
 
 <div class="grid2">
+<div class="lokationmenu">
   <Lokationmenu />
-
+</div>
   
   <div class="card">
     {data.map(card=>{
@@ -70,11 +76,58 @@ return <Programcard data={card}/>;
  grid-template-columns: 1fr 1fr 1fr;
 gap: 2rem;
 }
-
+div{
+       padding-right: 3%;
+}
 
 .grid2{
 display: flex;
 }
 
+.tilbageknap{
+ right: 0;
+ position: absolute;
+display: flex;
+top: 38%;
+
+}
+@media screen and (max-width: 800px) {
+  .card{
+    grid: none;
+   
+  
+  }
+
+  .lokationmenu{
+       display: none;
+     
+}
+
+h1{
+  font-size: 44px;
+
+}
+
+h2{
+   font-size: 25px;
+
+}
+
+ .indreby h2 {
+    text-align: left;
+    padding-top: 6%;
+    padding-left: 18.5%;
+    text-decoration: underline;
+    font-size: 25px;
+      
+}
+
+.tilbageknap{
+  display: none;
+}
+.instagram{
+  display: none;
+}
+  }
 
 </style>
