@@ -3,60 +3,60 @@ import MenuLayout from "../layouts/MenuLayout.astro";
 import "../styles/style.css";
 import BurgermenuItem from "../components/BurgermenuItem.astro";
 ---
+
 <MenuLayout>
-    <div class="grid_1">
+  <div class="grid_1">
     <h1>INFO</h1>
     <ul>
-    <BurgermenuItem burgermenutekst="PROGRAM 2024" ><a href="#"> <img src="/burgermenu-pi.svg" alt=""></a></BurgermenuItem>
-    <BurgermenuItem burgermenutekst="FOTO KONKURRENCE" ><a href="#"> <img src="/burgermenu-pi.svg" alt=""></a></BurgermenuItem>
-    <BurgermenuItem burgermenutekst="FAQ"  ><a href="#"> <img src="/burgermenu-pi.svg" alt=""></a></BurgermenuItem>
-    <BurgermenuItem burgermenutekst="FOR KUNSTNERE"  ><a href="#"> <img src="/burgermenu-pi.svg" alt=""></a></BurgermenuItem>
-    <BurgermenuItem burgermenutekst="BLIV VÆRT FOR ET KUNSTVÆRK"  ><a href="#"> <img src="/burgermenu-pi.svg" alt=""></a></BurgermenuItem>
-    <BurgermenuItem burgermenutekst="PERMENENT INSTALLATIONER"  ><a href="#"> <img src="/burgermenu-pi.svg" alt=""></a></BurgermenuItem>
-    <BurgermenuItem burgermenutekst="UDFORSK KØBENHAVN"  ><a href="#"> <img src="/burgermenu-pi.svg" alt=""></a></BurgermenuItem>
-    <BurgermenuItem burgermenutekst="NEWSLETTER" ><a href="#"> <img src="/burgermenu-pi.svg" alt=""></a></BurgermenuItem>
-    </ul></div>
-    <div class="grid_1">
-        <h1>OM OS</h1>
-        <ul>
-        <BurgermenuItem burgermenutekst="HVAD ER COPENHAGEN LIGHT FESTIVAL"  ><a href="#"> <img src="/burgermenu-pi.svg" alt=""></a></BurgermenuItem>
-        <BurgermenuItem burgermenutekst="HVEM ER VI"  ><a href="#"> <img src="/burgermenu-pi.svg" alt=""></a></BurgermenuItem>
-        <BurgermenuItem burgermenutekst="PARTNERE OG SPONSORER" ><a href="#"> <img src="/burgermenu-pi.svg" alt=""></a></BurgermenuItem>
-        <BurgermenuItem burgermenutekst="VISION" ><a href="#"> <img src="/burgermenu-pi.svg" alt=""></a></BurgermenuItem>
-        <BurgermenuItem burgermenutekst="PERSONOPSLYSNINGER"  ><a href="#"> <img src="/burgermenu-pi.svg" alt=""></a></BurgermenuItem>
-        <BurgermenuItem burgermenutekst="KONTAKT"  ><a href="#"> <img src="/burgermenu-pi.svg" alt=""></a></BurgermenuItem>
-      
-        </ul></div>
+      <BurgermenuItem burgermenutekst="PROGRAM 2024"><a href="program"> <img src="/burgermenu-pi.svg" alt="" /></a></BurgermenuItem>
+      <BurgermenuItem burgermenutekst="FOTO KONKURRENCE"><a href="#"> <img src="/burgermenu-pi.svg" alt="" /></a></BurgermenuItem>
+      <BurgermenuItem burgermenutekst="FAQ"><a href="#"> <img src="/burgermenu-pi.svg" alt="" /></a></BurgermenuItem>
+      <BurgermenuItem burgermenutekst="FOR KUNSTNERE"><a href="#"> <img src="/burgermenu-pi.svg" alt="" /></a></BurgermenuItem>
+      <BurgermenuItem burgermenutekst="BLIV VÆRT FOR ET KUNSTVÆRK"><a href="#"> <img src="/burgermenu-pi.svg" alt="" /></a></BurgermenuItem>
+      <BurgermenuItem burgermenutekst="PERMENENT INSTALLATIONER"><a href="#"> <img src="/burgermenu-pi.svg" alt="" /></a></BurgermenuItem>
+      <BurgermenuItem burgermenutekst="UDFORSK KØBENHAVN"><a href="#"> <img src="/burgermenu-pi.svg" alt="" /></a></BurgermenuItem>
+      <BurgermenuItem burgermenutekst="NEWSLETTER"><a href="#"> <img src="/burgermenu-pi.svg" alt="" /></a></BurgermenuItem>
+    </ul>
+  </div>
+  <div class="grid_1">
+    <h1>OM OS</h1>
+    <ul>
+      <BurgermenuItem burgermenutekst="HVAD ER COPENHAGEN LIGHT FESTIVAL"><a href="#"> <img src="/burgermenu-pi.svg" alt="" /></a></BurgermenuItem>
+      <BurgermenuItem burgermenutekst="HVEM ER VI"><a href="#"> <img src="/burgermenu-pi.svg" alt="" /></a></BurgermenuItem>
+      <BurgermenuItem burgermenutekst="PARTNERE OG SPONSORER"><a href="#"> <img src="/burgermenu-pi.svg" alt="" /></a></BurgermenuItem>
+      <BurgermenuItem burgermenutekst="VISION"><a href="#"> <img src="/burgermenu-pi.svg" alt="" /></a></BurgermenuItem>
+      <BurgermenuItem burgermenutekst="PERSONOPSLYSNINGER"><a href="#"> <img src="/burgermenu-pi.svg" alt="" /></a></BurgermenuItem>
+      <BurgermenuItem burgermenutekst="KONTAKT"><a href="#"> <img src="/burgermenu-pi.svg" alt="" /></a></BurgermenuItem>
+    </ul>
+  </div>
 </MenuLayout>
 
 <style>
-    h1{
-        font-size: 9.375rem;
-        font-weight: 400;
-        text-transform: uppercase;
-        font-family: "Montserrat", sans-serif;
-        color: #ffffff;
-        margin: 0;
-    }
+  h1 {
+    font-size: 9.375rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff;
+    margin: 0;
+  }
 
+  ul {
+    color: #ffffff;
+    list-style-type: none;
+    padding: 200px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.1rem;
+    justify-content: space-between;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
 
-    ul{
-        color: #ffffff;
-        list-style-type: none;
-        padding: 200px 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 2.1rem;
-        justify-content: space-between;
-        font-family: "Montserrat", sans-serif;
-        font-weight: 400;
-        font-size: 2rem;
-        text-transform: uppercase;
-        
-    }
-
-    .grid_1{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
+  .grid_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 </style>
