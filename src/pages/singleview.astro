@@ -2,16 +2,13 @@
 import MenuLayout from "../layouts/MenuLayout.astro";
 import "../styles/style.css";
 import FactItem from "../components/FactItem.astro";
-const data = await fetch(
-  "https://slquoievbkllhlylrgwr.supabase.co/rest/v1/CLF2",
-  {
-    method: "GET",
-    headers: {
-      apikey:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNscXVvaWV2YmtsbGhseWxyZ3dyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA3Njc5NDgsImV4cCI6MjAyNjM0Mzk0OH0.wlLjb_Yv7jAYDGof6lCqW1s0aZX0DaOFtMHIQm74_wE",
-    },
-  }
-).then((res) => res.json());
+import Foot from "../components/Foot.astro";
+const data = await fetch("https://slquoievbkllhlylrgwr.supabase.co/rest/v1/CLF2", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNscXVvaWV2YmtsbGhseWxyZ3dyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA3Njc5NDgsImV4cCI6MjAyNjM0Mzk0OH0.wlLjb_Yv7jAYDGof6lCqW1s0aZX0DaOFtMHIQm74_wE",
+  },
+}).then((res) => res.json());
 console.log(data);
 ---
 
@@ -24,24 +21,9 @@ console.log(data);
     <img src="/test.png" alt="" />
     <div class="cols">
       <section>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
-          porro. Esse consequatur aliquam placeat, veniam distinctio dignissimos
-          perferendis nisi adipisci, ea illum laboriosam deserunt, libero dolore
-          eaque dolorem corrupti quaerat.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-          enim eos voluptates iusto numquam ut facilis debitis vero delectus,
-          laboriosam quia quidem? Itaque ipsum veritatis sapiente illum soluta?
-          Ex, quidem?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-          enim eos voluptates iusto numquam ut facilis debitis vero delectus,
-          laboriosam quia quidem? Itaque ipsum veritatis sapiente illum soluta?
-          Ex, quidem?
-        </p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, porro. Esse consequatur aliquam placeat, veniam distinctio dignissimos perferendis nisi adipisci, ea illum laboriosam deserunt, libero dolore eaque dolorem corrupti quaerat.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda enim eos voluptates iusto numquam ut facilis debitis vero delectus, laboriosam quia quidem? Itaque ipsum veritatis sapiente illum soluta? Ex, quidem?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda enim eos voluptates iusto numquam ut facilis debitis vero delectus, laboriosam quia quidem? Itaque ipsum veritatis sapiente illum soluta? Ex, quidem?</p>
       </section>
       <section>
         <h3><strong>Lokation</strong><br />Ved Stranden 14</h3>
